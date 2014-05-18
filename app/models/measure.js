@@ -1,5 +1,5 @@
 export default DS.Model.extend({
-  temperature: DS.attr(),
-	datetime: DS.attr(),
+  temperature: DS.attr('number'),
+	datetime: DS.attr('date'),
 });
 

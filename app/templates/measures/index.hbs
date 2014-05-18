@@ -1,7 +1,18 @@
-<ul>
-{{#each model}}
-	<li>{{temperature}}
-{{/each}}
-</ul>
+<table class="pure-table">
+	<thead>
+    <tr>
+    	<th>Date</th>
+	    <th>Temp</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{{#each}}
+  	<tr>
+	  	<td>{{#link-to 'measures.show' this}}{{datetime}}{{/link-to}}</td>
+	  	<td>{{temperature}}ºC</td>
+  	</tr>
+  	{{/each}}
+  </tbody>
+</table>
 
 {{outlet}}

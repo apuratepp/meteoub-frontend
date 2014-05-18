@@ -1,4 +1,11 @@
-{{#link-to 'application' class="pure-button pure-button-primary"}}Application{{/link-to}}
-{{#link-to 'measures' class="pure-button pure-button-primary"}}measures{{/link-to}}
+<div class="pure-g-r">
+	<div class="pure-u-1">
+		{{#link-to 'measures.now' class="pure-button pure-button-primary"}}Now{{/link-to}}
+		{{#link-to 'measures' class="pure-button pure-button-primary"}}Last 24h{{/link-to}}
+	</div>
+	<div class="pure-u-1">
+		{{outlet}}
+	</div>
+</div>
 
-{{outlet}}
+
