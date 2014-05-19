@@ -10,6 +10,11 @@ Ember.js app for MeteoUB
 ### Development
 
 ```
+$ cd meteoub-backend
+$ foreman start
+```
+
+```
 $ cd meteoub-frontend
 $ ember server --proxy http://localhost:3000
 ```
