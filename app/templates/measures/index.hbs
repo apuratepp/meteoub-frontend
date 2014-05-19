@@ -8,8 +8,8 @@
   <tbody>
   	{{#each}}
   	<tr>
-	  	<td>{{#link-to 'measures.show' this}}{{datetime}}{{/link-to}}</td>
-	  	<td>{{temperature}}ºC</td>
+	  	<td>{{short-time datetime}}</td>
+	  	<td>{{#link-to 'measures.show' this class="pure-button pure-button-primary"}}{{temperature}}ºC{{/link-to}}</td>
   	</tr>
   	{{/each}}
   </tbody>
