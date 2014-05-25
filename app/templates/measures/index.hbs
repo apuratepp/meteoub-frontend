@@ -1,18 +1,10 @@
-<table class="pure-table">
-	<thead>
-    <tr>
-    	<th>Date</th>
-	    <th>Temp</th>
-    </tr>
-  </thead>
-  <tbody>
-  	{{#each}}
-  	<tr>
-	  	<td>{{short-time datetime}}</td>
-	  	<td>{{#link-to 'measures.show' this class="pure-button pure-button-primary"}}{{temperature}}ºC{{/link-to}}</td>
-  	</tr>
-  	{{/each}}
-  </tbody>
-</table>
+<div class="list-group">
+  {{#each}}
+    {{#link-to 'measures.show' this class="list-group-item"}}
+      {{short-time datetime}} 
+      <span class="pull-right"><strong>{{temperature}}ºC</strong></span>
+    {{/link-to}}
+  {{/each}}
+</div>
 
 {{outlet}}

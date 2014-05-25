@@ -1,6 +1,8 @@
 /* global require, module */
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var pickFiles = require('broccoli-static-compiler');
+var mergeTrees = require('broccoli-merge-trees');
 
 var app = new EmberApp({
   name: require('./package.json').name,
@@ -30,5 +32,12 @@ app.import('vendor/ic-ajax/dist/named-amd/main.js', {
   ]
 });
 
+// https://github.com/stefanpenner/ember-cli/issues/445
+var bootstrapTree = pickFiles('vendor', {
+  srcDir: '/bootstrap/dist/css/',
+  // files: [ ''],
+  destDir: '/assets'
+});
 
-module.exports = app.toTree();
+// module.exports = app.toTree();
+module.exports = mergeTrees([app.toTree(), bootstrapTree]);
