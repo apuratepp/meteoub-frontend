@@ -1,4 +1,6 @@
 <div class="list-group">
+  {{#if isLoading}}<div class="list-group-item">Loading</div>{{/if}}
+  {{#if isLoaded}}<div class="list-group-item">Loaded</div>{{/if}}
   {{#each}}
     {{#link-to 'measures.show' this class="list-group-item"}}
       {{short-time datetime}} 
