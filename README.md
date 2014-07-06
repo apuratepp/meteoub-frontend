@@ -1,20 +1,25 @@
-meteoub-frontend
-================
+# Meteoub-frontend
 
-Ember.js app for MeteoUB
+This README outlines the details of collaborating on this Ember application.
 
-### Requisites
+## Installation
 
-* [ember-cli](https://github.com/stefanpenner/ember-cli)
+* `git clone` this repository
+* `npm install`
+* `bower install`
 
-### Development
+## Running
 
-```
-$ cd meteoub-backend
-$ foreman start
-```
+* `ember server`
+* Visit your app at http://localhost:4200.
 
-```
-$ cd meteoub-frontend
-$ ember server --proxy http://localhost:3000
-```
+## Running Tests
+
+* `ember test`
+* `ember test --server`
+
+## Building
+
+* `ember build`
+
+For more information on using ember-cli, visit [http://iamstef.net/ember-cli/](http://iamstef.net/ember-cli/).

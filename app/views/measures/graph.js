@@ -14,7 +14,7 @@ export default Ember.View.extend({
 		var svg = d3.select('body').append('svg')
 								.attr('width', width)
 								.attr('height', height)
-								.append('g')
+								.append('g');
 
 		d3.json('http://meteoub.equip9.org/measures', function(error, data) {
 			x.domain(d3.extent(data.measures, function(measure){

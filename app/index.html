@@ -5,27 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>MeteoUB</title>
     <meta name="description" content="">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <meta name="viewport" content="user-scalable=no,width=device-width" />
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
 		<!-- Android Home Screen -->
 		<meta name="mobile-web-app-capable" content="yes">
 
 		<!-- iOS icon -->
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/icon.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/images/icon.png">
-    
-		{{BASE_TAG}}
+    <link rel="apple-touch-icon-precomposed" href="assets/images/icon.png">		
 
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/meteoub-frontend.css">
   </head>
   <body>
     <script>
-      window.ENV = {{ENV}};
+      window.MeteoubFrontendENV = {{ENV}};
+      window.EmberENV = window.MeteoubFrontendENV.EmberENV;
     </script>
+    <script src="assets/vendor.js"></script>
     <script src="assets/meteoub-frontend.js"></script>
     <script>
-      window.MeteoubFrontend = require('meteoub-frontend/app')['default'].create(ENV.APP);
+      window.MeteoubFrontend = require('meteoub-frontend/app')['default'].create(MeteoubFrontendENV.APP);
     </script>
   </body>
 </html>

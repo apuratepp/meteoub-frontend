@@ -2,6 +2,7 @@
 
 var Application = require('meteoub-frontend/app')['default'];
 var Router = require('meteoub-frontend/router')['default'];
+import Ember from 'ember';
 
 export default function startApp(attrs) {
   var App;
