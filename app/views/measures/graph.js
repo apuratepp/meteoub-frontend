@@ -9,8 +9,8 @@ export default Ember.View.extend({
 		d3.select("svg").remove();
 	},
 	loadGraph: function() {
-		var width = $(window).width();
-		var height = $(window).height();
+		var width = this.$(window).width();
+		var height = this.$(window).height();
 		
 		var x = d3.scale.linear().range([0, width]);
 		var y = d3.scale.ordinal().rangeRoundBands([0, height], 0.2);
@@ -36,7 +36,7 @@ export default Ember.View.extend({
 						.attr("class", function(measure) { 
 							return measure.temperature < 0 ? "bar negative" : "bar positive"; 
 						})
-						.attr("x", function(measure) { 
+						.attr("x", function() { 
 							return width / 10.0;
 						})
 						.attr("y", function(measure) { 
@@ -48,8 +48,8 @@ export default Ember.View.extend({
 							return width * relative_temperature;
 						})
 						.attr("height", y.rangeBand())
-						.attr("fill", function(measure) {
-							var relative_temperature = measure.temperature / 40.0; // relative to 0º C-40º C
+						.attr("fill", function() {
+							// var relative_temperature = measure.temperature / 40.0; // relative to 0º C-40º C
 							var color = 'orange';
 							return color;
 						});
