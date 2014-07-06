@@ -6,6 +6,7 @@ Router.map(function() {
 	this.resource("measures", function(){
 		this.route("show", { path: "/:measure_id" });
 		this.route("now", { path: "now" });
+		this.route("graph");
 	});
 });
 
